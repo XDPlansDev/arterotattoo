@@ -31,7 +31,7 @@ const App = () => {
    <div>
      <Header /> 
      <Routes>
-      <Route path="/Tattoo-Parlor" element={<Home />} /> 
+      <Route path="/" element={<Home />} /> 
       <Route path="admin" element={<Admin/>} />
       <Route path="/edit/:id" element={<Edit/>} />
       <Route path="/create" element={<Create/>} />
