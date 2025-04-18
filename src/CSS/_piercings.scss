@@ -1,0 +1,336 @@
+﻿/************************************************************************
+* Author: Dominic DiModugno
+* Date: March 2nd, 2023
+* Piercings page styles
+*/ 
+
+$Orange: #b46124; 
+$Merriweather: 'Merriweather'; 
+$Oswald: 'Oswald';
+
+.piercings-page-section {
+    background-color: black;
+
+    .peircings-page-title {
+        text-align: center;
+        padding-bottom: 140px;
+        padding-top: 50px;
+
+        @media only screen and (max-width: 1000px) {
+            padding-bottom: 79px;
+            padding-top: 27px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 23px;
+            letter-spacing: 0.12px;
+            font-family: $Oswald;
+            font-size: 23px;
+            letter-spacing: 0.12px;
+            font-weight: 400;
+
+            span {
+                color: $Orange;
+                font-size: 53px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                line-height: 58.83px;
+
+                @media only screen and (max-width: 640px) {
+                    font-size: 34px;
+                }
+
+                img { 
+                    height: auto;
+                    width: 25px;
+                }
+            }
+
+        }
+    
+        p {
+            color: white;
+        }
+
+        a {
+            position: relative;
+            width: 259px;
+            height: 54px;
+            border: 3px solid white;
+            background-color: transparent;
+            color: white;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-family: $Oswald;
+            margin-top: 32px;
+            transition: all 0.25s ease-in-out;
+        }
+
+        a:hover {
+            background-color: rgba(255, 255, 255, 1);
+            color: black;
+        }
+    }
+
+    .piercing-page-price-section {
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding-bottom: 100px;
+        padding-top: 50px;
+        background-color: #e5c8a3;
+
+        .piercings-price-background {
+            position: absolute;
+            left: 0px;
+            top: -4vw;
+            object-fit: contain;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .piercing-price-content {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            z-index: 99;
+
+            @media only screen and (max-width: 1000px) {
+                flex-direction: column;
+            }
+
+            @media only screen and (max-width: 500px) {
+                width: 100vw;
+            }
+
+            .piercings-page-price-title {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 39px;
+                    font-family: $Oswald;
+
+                    @media only screen and (max-width: 1000px) {
+                        font-size: 32px;
+                    }
+
+                    @media only screen and (max-width: 640px) {
+                        font-size: 27px;
+                    }
+                }
+            }
+
+            .piercings-page-price-box {
+                border: 8px solid $Orange;
+                padding: 54px 44px 54px;
+                max-width: 900px;
+                height: 470px;
+                width: 100%;
+
+                @media only screen and (max-width: 1280px) {
+                    margin: 0;
+                }
+
+                @media only screen and (max-width: 640px) {
+                    padding: 30px 20px 30px;
+                }
+            }
+
+            .piercings-page-artist {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                top: 48px;
+                width: 41%;
+                height: auto;
+                padding-left: 2.5vw;
+
+                @media only screen and (max-width: 1000px) {
+                    width: 100%;
+                    padding: 0;
+                }
+
+                h2 {
+                    font-family: $Oswald;
+                    letter-spacing: 3px;
+                    font-size: 30px;
+                    text-align: center;
+                    font-weight: 300;
+                    margin-top: 11px;
+                }
+
+                span {
+                    font-family: $Merriweather;
+                    font-size: 15px;
+                    color: #555555;
+                    margin-top: 5px;
+                }
+
+                .piercings-hover-container {
+                    background-color: black;
+
+                    .piercing-page-artists-image {
+                        position: relative;;
+                        height: auto;
+                        width: 100%;
+                        height: 100%;
+                        transition: all 0.35s ease-in-out;
+
+                        @media only screen and (max-width: 500px) {
+                            width: 100%;
+                        }
+
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+
+                    
+            }
+
+                .price-text {
+                    max-width: 59%;
+                    width: 748px;
+                    padding-right: 2.5vw;
+
+
+                    @media only screen and (max-width: 1000px) {
+                        width: unset;
+                        max-width: unset;
+                    }
+                        
+                    @media only screen and (max-width: 800px) {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        padding: 0;
+                        width: 100%;
+                    }
+            
+                }
+            }
+        }
+    }
+
+    .piercings-page-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+      a {
+          position: relative;
+          width: 25%;
+          height: 25vw;
+          overflow: hidden;
+          outline: 5px solid  #131313;
+
+          @media only screen and (max-width: 800px) {
+            width: 50%;
+            height: 50vw;
+          }
+
+        img {
+             display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0; 
+            left: 0; 
+            object-fit: cover;
+            transition: all 0.35s ease-in-out;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.05);;
+                opacity: 0.8;
+            }
+        }
+      }
+    }
+
+
+.piercing-dot-leaders {
+        height: 100%;    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        li {
+        display: flex;
+        justify-content: space-between;
+
+        .dots {
+            position: relative;
+            height: 16px;
+            width: 100%;
+            border-bottom: 3px dotted black;
+            margin-top: 10px;
+        }
+
+        .jewelry-width {
+            min-width: 172px;
+
+            @media only screen and (max-width: 640px) {
+                min-width: 152px;
+            }
+        }
+
+        span {
+            font-family: $Oswald;
+            font-size: 23px;
+            font-weight: 300;
+
+            @media only screen and (max-width: 640px) {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-family: $Merriweather;
+            font-size: 15px;
+        }
+
+
+
+        
+    }
+
+    
+
+
+    .piercing-dot-leaders p {
+        @media only screen and (max-width: 500px) {
+            display: none;
+        }
+    }
+
+
+}

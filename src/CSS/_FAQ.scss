@@ -1,0 +1,239 @@
+/**************************************************************************************************************************************
+* Author: Dominic DiModugno
+* Date: March 8th, 2023 
+*
+* Styles for FAQ page.
+*/
+
+.faq-page {
+    .secondary-banner {
+        .paper-gradient {
+            height: 21%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 0px -92px 62px rgba(0,0,0,0.7) inset;
+        }
+    }
+}
+
+.faq-section1-background {
+    position: absolute;
+    left: 0;
+    top: -35px;
+    object-fit: contain;
+    width: 100%;
+    margin-top: -10px;
+
+    @media only screen and (min-width: 2100px) {
+        margin-top: -20px;
+    }
+}
+
+.faq-section {
+    position: relative;
+    z-index: 2;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e5c8a3;
+    
+    .faq-title {
+        font-family: $Oswald;
+        letter-spacing: 0.27px;
+        color: #3d250d;
+        text-align: center;
+        font-size: 23px;
+        margin-bottom: 50px;
+        z-index: 99;
+
+        @media only screen and (max-width: 1000px) {
+            font-size: 21px;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $Orange;
+            gap: 10px;
+            font-weight: 400;
+            font-size: 53px;
+            line-height: 58.83px;
+
+            @media only screen and (max-width: 1000px) {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+//dropdown menu styles :D 
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    list-style: none;
+    color: white;
+    padding-left: 0 !important;
+
+    li {
+        position: relative;
+        width: 100%;
+        background-color:  #1c1c1c;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    h2 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-family: $Oswald;
+        font-size: 20px;
+        position: relative;
+        width: 100%;
+        padding: 28px;
+        padding-left: 25px;
+        text-decoration: none;
+        color: white;
+
+        @media only screen and (max-width: 1120px) {
+            font-size: 20px;
+        }
+
+        @media only screen and (max-width: 900px) {
+        font-size: 18px;
+        }
+    }
+
+    .FAQEntry__body {
+        display: block;
+    }
+
+    .FAQEntry__bodyPos {
+        display: block;
+        overflow: hidden;
+        overflow-wrap: normal;
+        font-family: $Merriweather;
+        font-size: 15px;
+        padding-inline: 25px;
+        margin: 0;
+        max-height: 0;
+        transition: 0.3s;
+    }
+
+    .active {
+        max-height: 600px !important; 
+        padding-bottom: 30px;
+    }
+
+//styles applied to plus sign
+
+    .faq-plus {
+        height: 20px;
+        width: 20px;
+        background-color: transparent;
+        position: absolute;
+        margin-top: 6px;
+        display: block;
+        left: 23px;
+        top: 24px;
+
+        @media only screen and (max-width: 900px) {
+            margin-top: 4px;
+        }
+    }
+    
+    .plus-active::before {
+        transform: rotate(90deg) translateX(-5px)!important;
+    }
+    
+    .faq-plus::after {
+        content: " ";
+        position: absolute;
+        display: block;
+        background-color: $Orange;
+        height: 3px;
+        width: 9px;
+        z-index: 9;
+        top: 50%;
+        left: 37%;
+        transform: translateY(-50%);
+    }
+    
+    .faq-plus::before {
+        content: " "; 
+        position: absolute;
+        display: block;
+        background-color: $Orange;
+        width: 3px;
+        height: 9px;
+        z-index: 9;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%);
+        transition: .25s ease-in-out;
+    }
+
+
+/*****************************/
+}
+
+.faq-spacer {
+    height: 20px;
+    width: 25px;
+    flex-shrink: 0;
+}
+
+.faq-flower {
+    position: absolute;
+    top: -18px;
+    left: -176px;
+
+    @media only screen and (max-width: 1300px) {
+        height: auto;
+        width: 299px;
+        top: 130px;
+        left: -73px;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        top: 20px;
+    }
+
+    @media only screen and (max-width: 550px) {
+        top: 80px;
+        width: 250px;
+    }
+}
+
+.faq-bird {
+    position: absolute;
+    top: 220px;
+    right: -133px;
+
+    @media only screen and (max-width: 1300px) {
+        top: 320px;
+        height: auto;
+        width: 299px;
+    }
+
+    @media only screen and (max-width: 550px) {
+        top: 420px;
+        right: -30px;
+        width: 199px;
+    }
+}
+
+.FAQEntry--open .faq-plus::before { 
+    transform: translateY(-50%) rotate(90deg);
+}

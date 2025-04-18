@@ -4,7 +4,7 @@ runtime.loadChunk("server/chunks/ssr/node_modules_next_14f8521f._.js");
 runtime.loadChunk("server/chunks/ssr/[root-of-the-server]__c75c51b7._.js");
 runtime.loadChunk("server/chunks/ssr/node_modules_0562e43c._.js");
 runtime.loadChunk("server/chunks/ssr/[root-of-the-server]__953d6a76._.js");
-runtime.loadChunk("server/chunks/ssr/node_modules_c17eaa08._.js");
+runtime.loadChunk("server/chunks/ssr/node_modules_19da1c24._.js");
 runtime.loadChunk("server/chunks/ssr/[root-of-the-server]__184cf351._.js");
 runtime.getOrInstantiateRuntimeModule("[project]/node_modules/next/dist/esm/build/templates/pages.js { INNER_PAGE => \"[project]/src/pages/index.tsx [ssr] (ecmascript)\", INNER_DOCUMENT => \"[project]/node_modules/next/document.js [ssr] (ecmascript)\", INNER_APP => \"[project]/src/pages/_app.tsx [ssr] (ecmascript)\" } [ssr] (ecmascript)", CHUNK_PUBLIC_PATH);
 module.exports = runtime.getOrInstantiateRuntimeModule("[project]/node_modules/next/dist/esm/build/templates/pages.js { INNER_PAGE => \"[project]/src/pages/index.tsx [ssr] (ecmascript)\", INNER_DOCUMENT => \"[project]/node_modules/next/document.js [ssr] (ecmascript)\", INNER_APP => \"[project]/src/pages/_app.tsx [ssr] (ecmascript)\" } [ssr] (ecmascript)", CHUNK_PUBLIC_PATH).exports;

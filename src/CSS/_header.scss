@@ -1,0 +1,658 @@
+/**********************************************
+*** MOBILE STYLES *****************************
+**********************************************/ 
+
+$Orange: #b46124; 
+$Merriweather: 'Merriweather'; 
+$Oswald: 'Oswald';
+
+header {
+    top: 0;
+}
+
+
+@media only screen and (max-width: 1349px) {
+    .phone-number {
+        display: none; 
+    }
+
+    .menu-space {
+        display: none;
+    }
+
+    .contact-container {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    .menu-space {
+        display: block;
+        width: 250px;
+        height: 50px;
+        
+    }
+}
+
+.phone-number {
+    color: white; 
+    font-size: 10px;
+    font-family: $Merriweather;
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+
+    @media only screen and (max-width: 1349px) {
+        display: none;
+    }
+}
+
+.desktop-phone {
+    width: 100%;
+    display: flex;
+
+    img {
+        position: relative;
+        top: 13px;
+        height: 10px;
+        width: 10px;
+        margin-top: 9px;
+        margin-right: 10px;
+    }
+} 
+
+//Header Styles
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    position: absolute;
+    z-index: 7;
+    left: 0px;
+    width: 100%;
+
+    @media only screen and (min-width: 1350px) {
+        flex-direction: column;
+        padding: 0 !important;
+    }
+
+    .phone {
+        @media only screen and (min-width: 1350px) {
+            display: none; 
+        }    
+    }
+}
+
+@media only screen and (max-width: 400px) and (min-width: 300px) {
+    header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+//Nav Styles
+
+nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0; 
+    //right: -60vw;
+    z-index: 80;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, .95);
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    transition: all 0.4s ease-in-out;
+    transform: translateX(100%);
+    padding-right: 20px;
+
+    @media only screen and (min-width: 1350px) {
+        flex-direction: row;
+        justify-content: center;
+        opacity: 1;
+        pointer-events: all;
+        width: 100% !important;
+        background-color: transparent;
+        position: relative;
+        height: unset;
+        pointer-events: unset;
+        transform: unset;
+        padding-right: 0px;
+        margin-top: 8px;
+    }
+
+    @media only screen and (min-width: 1700px) {
+        margin-top: 5px;
+    }
+
+}
+
+
+.nav {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column; 
+    margin: 0px;
+    position: relative;
+    margin-top: 90px;
+    margin-top: 118px;
+    transition: .25s;
+
+    @media only screen and (min-width: 1350px) {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 30px;
+        visibility: visible;
+        transition-delay: 0s;
+        width: 100%;
+        margin-top: unset;
+    }
+
+    @media only screen and (min-width: 1350px) {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+
+
+    a {
+        font-family: $Oswald;
+        text-decoration: none !important;
+        color: white;
+        transition: all 0.25s ease-in-out;
+    
+        @media only screen and (min-width: 1350px) {
+            display: block;
+            width: 100%;
+            text-align: center;
+            color: white;
+            z-index: 80;
+            font-size: 16px !important;
+            padding-right: 0px !important;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            letter-spacing: 2px;
+        }
+
+        @media only screen and (min-width: 1500px) {
+            font-size: 18px !important;
+        }
+
+        @media only screen and (min-width: 1350px) {
+            font-size: 17px !important;
+        }
+    
+        @media only screen and (max-width: 1349px) {
+            width: 100%;
+            text-align: right;
+            margin-top: 24px;
+            padding-inline: 30px 30px;
+        }
+
+        @media only screen and (min-width: 500px) {
+            font-size: 18px;
+        }
+
+        &.parent-link {
+            padding-right: 50px;
+        }
+    }
+
+    @media only screen and (min-width: 1350px) {
+        a:hover {
+            color: $Orange;
+        }
+    }
+
+    .contact-us {
+        display: none;
+
+        @media only screen and (min-width: 1350px) {
+            display: block;
+            outline: 1px solid $Orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 32px;
+            width: 108px;
+            transition: all 0.5s ease-in-out;
+            color: white !important;
+        }
+
+        @media only screen and (min-width: 1350px) {
+            height: 38px;
+            width: 151px;
+        }
+
+        a {
+            color: white !important;
+        }
+    }
+
+    .contact-us:hover {
+        background-color: $Orange;
+    }
+
+.mobile-contact-us {
+    @media only screen and (min-width: 1350px) {
+        display: none;
+    }
+}
+
+    .list-items, .has-dropdown {
+        justify-content: center;
+
+        @media only screen and (min-width: 1350px) {
+            border: none; 
+            font-size: 1.1vw;
+        }
+    }
+
+}
+
+.dropdown-items {
+    font-size: 14px !important;
+
+    .contact-svg {
+        position: relative;
+        height: 20px;
+        width: 20px;
+        top: 5px;
+    }
+}
+
+
+
+
+//hamburger menu styles
+
+// functionality
+#hamburger:checked ~ nav {
+    max-height: 100vh;
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(0%);
+}
+
+#hamburger {
+    display: none
+}
+
+.hmbrg {
+    display: block;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column; 
+    z-index: 100;
+    height: 33px;
+    margin-top: 30px;
+    cursor: pointer;
+
+    @media only screen and (min-width: 500px) {
+        margin-top: 50px;
+    }
+    
+    @media only screen and (min-width: 1350px) {
+        display: none; 
+    }
+}
+
+.top-bun, .patty, .bottom-bun {
+    height: 5px;
+    width: 38px;
+    position: relative;
+    background-color: white;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    top: 0px;
+    transition: 0.35s ease-in-out;
+}
+
+#hamburger:checked {
+    position: fixed;
+}
+
+#hamburger:checked ~ label .top-bun {
+    transform: rotate(-45deg);
+    margin-bottom: 7px;
+    top: 13px;
+    position: relative;
+}
+
+#hamburger:checked ~ label .patty {
+    opacity: 0;
+    transform: rotate(45deg);
+} 
+
+#hamburger:checked ~ label .bottom-bun {
+    transform: rotate(45deg);
+    margin-bottom: 5px;
+    position: relative;
+    top: -9px;
+} 
+
+// img styles
+
+.logo {
+    z-index: 6;
+    width: 210px;
+    height: auto;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 10px;
+    transition: all 0.5s ease-in-out;
+
+    
+
+    @media only screen and (min-width: 500px) {
+        width: 290px; 
+    }
+
+
+    @media only screen and (min-width: 1100px) {
+        width: 280px;
+        z-index: 90;
+        top: 10px;
+    }
+
+    @media only screen and (min-width: 1700px) {
+        width: 382px;
+    }
+
+}
+
+.logo:hover {
+    transform: scale(.97);
+}
+
+
+
+.phone {
+    height: 30px;
+    width: 30px;
+    fill: white;
+    z-index: 6;
+    transform: translateY(-1px);
+    margin-top: 30px;
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+        fill: $Orange;
+    }
+
+    @media only screen and (min-width: 500px) {
+        margin-top: 50px;
+    }
+}
+
+.phone-number {
+    font-size: 15px;
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+        color: $Orange
+    }
+}
+
+// Dropdown menu styles
+
+//hide the checkbox on desktop
+
+//Desktop
+	.has-dropdown {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+
+		@media only screen and (min-width: 1350px) {
+			display: flex;
+			gap: 5px;
+		}
+
+		a {
+			.desktop-chevron {
+				position: relative;
+				bottom: 3px;
+				transition: all 0.50s ease-in-out;
+			}
+        }
+        
+
+
+		.dropdown-content, .dropdown-content-about {
+			position: relative;
+			color: white;
+			transition: 0.25s ease-in-out;
+			font-size: 14px;
+			list-style: none;
+			text-align: right;
+            overflow: hidden;   
+            max-height: 0px;
+            padding-left: 0;
+
+			a {
+                font-family: $Merriweather !important;
+                padding-block: 0px;
+			}
+
+			@media only screen and (max-width: 500px) {
+				font-size: 11px;
+			}
+
+			@media only screen and (min-width: 1350px) {
+				position: absolute;
+				opacity: 0;
+				transition: 0.5s ease-in-out;
+				width: 210px;
+				display: flex;
+				background-color: rgba(0, 0, 0, .95);
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				border-radius: 5px;
+                margin-bottom: 12px;
+                padding-block: 10px;
+				pointer-events: none;
+                // transform: translate(-44px, 90px);
+                left: 50%;
+                top: 100%;
+                transform: translateX(-50%);
+                max-height: none;
+			}
+		}
+
+        @media only screen and (min-width: 1350px) {
+		&:hover {
+			a {
+				.desktop-chevron {
+					transform: rotate(180deg);
+				}
+			}
+
+			.dropdown-content, .dropdown-content-about {
+				// transform: translate(-44px, 130px);
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
+    }
+    }
+
+
+.has-dropdown {
+    position: relative;
+}
+
+@media only screen and (min-width: 1350px) {
+    .has-dropdown::before {
+        content: " ";
+        width: 100%;
+        height: 50px;
+        position: absolute;
+    }
+}
+
+
+
+.dropdown-content li {
+
+    @media only screen and (min-width: 1350px) {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 1349px) {
+        padding-top: 10px;
+    }
+
+    a {
+        @media only screen and (min-width: 1350px) {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+#about, #artists {
+    display: none; 
+}
+
+.artists, .about {
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+
+    @media only screen and (min-width: 1350px) {
+        display: none;
+    }
+}
+
+
+//artists chevron
+#artists:checked ~ .artists img {
+    transform: rotate(180deg);
+}
+
+
+
+//about shop chevron
+#about:checked ~ .about img {
+    transform: rotate(180deg); 
+}
+
+.nav input:checked ~ .dropdown-content {
+    max-height: 300px;
+}
+
+.nav input:checked ~ label::before {
+    transform: translateY(-50%) rotate(90deg);
+
+}
+
+.desktop-chevron {
+    margin-left: 6px;
+    @media only screen and (max-width: 1349px) {
+        display: none;
+    }
+}
+
+.has-dropdown label {
+    width: 100%;
+    height: 67px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    @media only screen and (min-width: 500px) {
+        height: 75px;
+    }
+
+    @media only screen and (min-width: 1350px) {
+    display: none;
+    }
+}
+
+
+
+
+
+.list-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+//plus minus sign styles
+
+.plus-sign {
+    height: 87px;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    left: 0; 
+    top: 0;
+    
+    @media only screen and (min-width: 1350px) {
+        display: none;
+    }
+}
+
+
+.plus-sign::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: $Orange;
+    height: 3px;
+    width: 9px;
+    z-index: 9;
+    top: 43%;
+    right: 30px;
+    transform: translateY(-50%);
+
+    @media only screen and (max-width: 500px) {
+        top: 46%;
+    }
+}
+
+.plus-sign::before {
+    content: " "; 
+    position: absolute;
+    display: block;
+    background-color: $Orange;
+    width: 3px;
+    height: 9px;
+    z-index: 9;
+    top: 43%;
+    right: 33px;
+    transform: translateY(-50%);
+    transition: .25s ease-in-out;
+
+    @media only screen and (max-width: 500px) {
+        top: 46%;
+    }
+}
+
